@@ -36,10 +36,10 @@ def shop_trip() -> None:
                         * cheapest_shop.products["butter"])
         products_cost = milk_price + bread_price + butter_price
         money_left = customer.money - all_shops_cost[cheapest_shop]
+        curent_date = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 
         print(f"{customer.name} rides to {cheapest_shop.name}\n\n"
-              f"Date: "
-              f"{datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")}\n"
+              f"Date: {curent_date}\n"
               f"Thanks, {customer.name}, for your purchase!\n"
               "You have bought:\n"
               f"{customer.product_cart["milk"]} milks for "
