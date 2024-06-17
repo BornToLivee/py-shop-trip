@@ -10,7 +10,7 @@ def calculate_product_cost(product_cart: dict, products: dict) -> float:
 
 
 def format_price(price: float) -> str:
-    if price.is_integer():
+    if price % 1 == 0:
         return str(int(price))
     else:
         return f"{price}"
