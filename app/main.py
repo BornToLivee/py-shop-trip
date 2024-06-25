@@ -9,11 +9,8 @@ def calculate_product_cost(product_cart: dict, products: dict) -> float:
                for product in product_cart)
 
 
-def format_price(price: float) -> str:
-    if price % 1 == 0:
-        return str(int(price))
-    else:
-        return f"{price}"
+def format_price(price: float) -> int | float:
+    return int(price) if price % 1 == 0 else price
 
 
 def shop_trip() -> None:
@@ -70,7 +67,3 @@ def shop_trip() -> None:
               "See you again!\n\n"
               f"{customer.name} rides home\n"
               f"{customer.name} now has {money_left} dollars\n")
-
-
-if __name__ == "__main__":
-    shop_trip()
